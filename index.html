@@ -10,20 +10,35 @@
 <body>
     <div id="presentation">
         <div class="slide-container">
-            <div class="header">
-                <div class="slide-counter">Slide <span id="current-slide">1</span> of <span id="total-slides"></span></div>
-                <div class="logo">
-                    <img src="logo.png" alt="NorthStar Anesthesia Logo" id="header-logo">
-                </div>
-                <div class="navigation">
-                    <button id="prev-slide" aria-label="Previous slide">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                    <button id="next-slide" aria-label="Next slide">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
-                </div>
-            </div>
+            <div class="header desktop-header">
+    <div class="slide-counter">Slide <span id="current-slide-desktop">1</span> of <span id="total-slides-desktop"></span></div>
+    <div class="logo">
+        <img src="logo.png" alt="NorthStar Anesthesia Logo" id="header-logo-desktop">
+    </div>
+    <div class="navigation">
+        <button id="prev-slide-desktop" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="next-slide-desktop" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
+
+<div class="header mobile-header">
+    <div class="logo">
+        <img src="logo.png" alt="NorthStar Anesthesia Logo" id="header-logo-mobile">
+    </div>
+    <div class="navigation">
+        <button id="prev-slide-mobile" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="slide-counter">Slide <span id="current-slide-mobile">1</span> of <span id="total-slides-mobile"></span></div>
+        <button id="next-slide-mobile" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
             <div class="content-area">
                 <div class="text-content">
                     <h2 id="slide-title"></h2>

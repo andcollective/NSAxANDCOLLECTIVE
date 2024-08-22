@@ -36,17 +36,7 @@ body, html {
     margin-bottom: 3rem;
 }
 
-.slide-counter {
-    font-size: 0.875rem;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#header-logo {
+.logo img {
     max-height: 40px;
     max-width: 200px;
 }
@@ -56,10 +46,11 @@ body, html {
     border: none;
     color: white;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
-.navigation button:first-child {
-    margin-right: 0.5rem;
+.slide-counter {
+    font-size: 0.875rem;
 }
 
 .content-area {
@@ -115,6 +106,31 @@ li {
     object-fit: cover;
 }
 
+.mobile-header {
+    display: none;
+}
+
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.desktop-header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.desktop-header .navigation {
+    display: flex;
+}
+
+.desktop-header .navigation button:first-child {
+    margin-right: 0.5rem;
+}
+
 @media (max-width: 768px) {
     #presentation {
         height: 100%;
@@ -127,38 +143,40 @@ li {
         height: 100%;
         padding: 1rem;
         overflow-y: auto;
-        display: flex;
-        flex-direction: column;
     }
 
-    .header {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 1.5rem;
     }
 
-    .logo {
-        order: -1;
+    .mobile-header .logo {
         margin-bottom: 1rem;
     }
 
-    .slide-counter {
-        order: 0;
-        margin-bottom: 0.5rem;
+    .mobile-header .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
-    .navigation {
-        order: 1;
+    .mobile-header .slide-counter {
+        margin: 0 1rem;
     }
 
     .content-area {
         flex-direction: column;
-        flex: 1;
-        overflow-y: auto;
     }
 
     .text-content {
-        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .divider {
@@ -170,13 +188,10 @@ li {
     .image-content {
         width: 100%;
         height: auto;
-        max-height: none;
     }
 
     #slide-image {
-        width: 100%;
         height: auto;
-        object-fit: contain;
     }
 
     h2 {
@@ -185,10 +200,5 @@ li {
 
     ul {
         padding-left: 1rem;
-    }
-
-    #slide-blurb {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
     }
 }

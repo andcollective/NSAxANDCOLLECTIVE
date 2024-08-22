@@ -140,7 +140,12 @@ function updateSlide() {
     document.getElementById('slide-blurb').textContent = slide.blurb;
     document.getElementById('slide-image').src = slide.image;
     document.getElementById('slide-image').alt = `Slide ${currentSlide + 1} image`;
-    document.getElementById('current-slide').textContent = currentSlide + 1;
+    
+    // Update both desktop and mobile slide counters
+    document.getElementById('current-slide-desktop').textContent = currentSlide + 1;
+    document.getElementById('current-slide-mobile').textContent = currentSlide + 1;
+    document.getElementById('total-slides-desktop').textContent = slides.length;
+    document.getElementById('total-slides-mobile').textContent = slides.length;
 }
 
 function nextSlide() {
@@ -154,8 +159,18 @@ function prevSlide() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('next-slide').addEventListener('click', nextSlide);
-    document.getElementById('prev-slide').addEventListener('click', prevSlide);
-    document.getElementById('total-slides').textContent = slides.length;
+    // Add event listeners for desktop navigation
+    const prevSlideDesktop = document.getElementById('prev-slide-desktop');
+    const nextSlideDesktop = document.getElementById('next-slide-desktop');
+    if (prevSlideDesktop) prevSlideDesktop.addEventListener('click', prevSlide);
+    if (nextSlideDesktop) nextSlideDesktop.addEventListener('click', nextSlide);
+
+    // Add event listeners for mobile navigation
+    const prevSlideMobile = document.getElementById('prev-slide-mobile');
+    const nextSlideMobile = document.getElementById('next-slide-mobile');
+    if (prevSlideMobile) prevSlideMobile.addEventListener('click', prevSlide);
+    if (nextSlideMobile) nextSlideMobile.addEventListener('click', nextSlide);
+
+    // Initialize the first slide
     updateSlide();
 });
