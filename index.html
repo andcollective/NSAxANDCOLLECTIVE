@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthStar Anesthesia Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="presentation">
+        <div class="slide-container">
+            <div class="header">
+                <div class="slide-counter">Slide <span id="current-slide">1</span> of <span id="total-slides"></span></div>
+                <div class="logo">
+                    <img src="logo.png" alt="NorthStar Anesthesia Logo" id="header-logo">
+                </div>
+                <div class="navigation">
+                    <button id="prev-slide" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button id="next-slide" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="content-area">
+                <div class="text-content">
+                    <h2 id="slide-title"></h2>
+                    <ul id="slide-content"></ul>
+                    <p id="slide-blurb"></p>
+                </div>
+                <div class="divider"></div>
+                <div class="image-content">
+                    <img id="slide-image" src="" alt="Slide image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
